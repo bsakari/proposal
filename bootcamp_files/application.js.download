@@ -1,0 +1,177 @@
+$(function() {
+  // Setup enroll form lightbox
+  EnrollForm.init()
+  // Setup contact form
+  ContactForm.init();
+  // Setup reserve form
+  ReserveForm.init();
+  // Setup involved form
+  InvolvedForm.init();
+
+  // Setup carousels
+  HeroCarousel.init();
+  ItemCarousel.init($("#events .event-carousel"));
+  ItemCarousel.init($("#testimonials .quote-carousel"));
+
+  // Smooth animated scroll
+  SmoothScroll.init();
+
+  // Trigger fade effect for relevant pages
+  FadeInEffect.init($('.gi_cta'));
+
+  // Setup ajax form on services page
+  $("#services_form").find("input[name=within_popup]").val("true");
+  AjaxForm.setup('#services_form', "Your contact request has been sent. Expect a reply shortly!");
+});
+
+// Handles the enroll form behavior, revealing and submitting
+EnrollForm = {
+  // EnrollForm.init();
+  init : function() {
+    // Triggered when a user clicks on an enroll button
+    $('a[data-course-id]:not(.disabled)').click(function(e) {
+      e.preventDefault();
+      EnrollForm.show($(this));
+    });
+    // Triggered when the enrollment form is submitted
+    $('#enroll_form').on('ajax:after', function(e) {
+      EnrollForm.submit($(this));
+    });
+  },
+  // Display the enroll form
+  show : function(enrollLink) {
+    var courseName = enrollLink.data("course-id");
+    var courseTitle = enrollLink.data("course-title");
+    $('#enroll_form').find('input#enroll_request_course_name').val(courseName).end().find("h2").text(courseTitle)
+    $("#enroll_form").lightbox_me({
+        centered: true,
+        onLoad: function() {
+            $("#enroll_form").find("input[name=within_popup]").val("true!");
+            $('#enroll_form').find('input[type=text]:first').focus();
+        }
+    });
+  },
+  // Success submits form and notifies user
+  submit : function(enrollForm) {
+    enrollForm.closest('form').find("input[type=text], textarea").val("")
+    enrollForm.trigger('close');
+    $.notify.success('Your request for enrollment has been submitted, thanks!', { autoClose : 3000, close : true });
+  }
+};
+
+// Handles contact form behavior
+ContactForm = {
+  init : function() {
+    // Triggered when a user clicks on contact link
+    $('a[data-contact-modal]').click(function(e) {
+      ContactForm.show();
+      $("#contact_form").find("input[name=within_popup]").val("true");
+    });
+    // Setup ajax submit
+    var successMessage = 'Your contact message has been sent. Expect a reply soon!';
+    AjaxForm.setup('#contact_form', successMessage);
+  },
+  show : function() {
+    $("#contact_form").lightbox_me({
+        centered: true,
+        onLoad: function() {
+            $('#contact_form').find('input[type=text]:first').focus();
+        }
+    });
+  }
+}
+
+// Handles reserve training seat form behavior
+ReserveForm = {
+  init : function() {
+    // Triggered when a user clicks on contact link
+    $('a[data-reserve-modal]').click(function(e) {
+      ReserveForm.show();
+      $('#reserve_form').find('input#reserve_request_kind').val($(this).data("kind"))
+      $("#reserve_form").find("input[name=within_popup]").val("true");
+    });
+    // Setup ajax submit
+    var successMessage = 'Your request for training has been received. We will be in touch with you soon!';
+    AjaxForm.setup('#reserve_form', successMessage);
+  },
+  show : function() {
+    $("#reserve_form").lightbox_me({
+        centered: true,
+        onLoad: function() {
+            $('#reserve_form').find('input[type=text]:first').focus();
+        }
+    });
+  }
+}
+
+// Handles Getting Involved Form
+InvolvedForm = {
+  init : function() {
+    // Triggered when a user clicks on contact link
+    $('a[data-involved-modal]').click(function(e) {
+      InvolvedForm.show();
+      $('#involved_form').find('input#involved_request_kind').val($(this).data("kind"))
+      $("#involved_form").find("input[name=within_popup]").val("true");
+    });
+    // Setup ajax submit
+    var successMessage = 'Thanks! We will be in touch with you soon!';
+    AjaxForm.setup('#involved_form', successMessage);
+  },
+  show : function() {
+    $("#involved_form").lightbox_me({
+        centered: true,
+        onLoad: function() {
+            $('#involved_form').find('input[type=text]:first').focus();
+        }
+    });
+  }
+};
+
+// Handles form submission and clearing
+// AjaxForm.setup('#reserve_form', "Success message!");
+AjaxForm = {
+  setup : function(formId, notifyMessage) {
+     // Triggered when a form is submitted
+     $(formId).on('ajax:after', function(e) {
+       AjaxForm.submit($(formId), notifyMessage);
+     });
+  },
+  // Success submits form and notifies user, clears fields
+  submit : function(reserveForm, notifyMessage) {
+    reserveForm.closest('form').find("input[type=text], textarea").val("")
+    reserveForm.closest('form').each (function(){ this.reset(); });
+    reserveForm.trigger('close');
+    $.notify.success(notifyMessage, { autoClose : 5000, close : true });
+  }
+};
+
+// Setup fade in effect
+// FadeInEffect.init($('.gi_cta'));
+FadeInEffect = {
+  init : function(el) {
+    if ($(el).length == 0) { return; }
+    $(el).localScroll();
+    window.sr = new scrollReveal( FadeInEffect.config );
+  },
+  config : {
+    enter: 'top',
+    move: '0px',
+    over: '.5s',
+    easing: 'ease-in',
+    delay:  'once',
+    vFactor: 0.80
+  }
+};
+
+// Setup smooth anchor scrolling for links with .scroll class
+SmoothScroll = {
+  init : function() {
+    $("a.scroll").click(function(event){
+      var offset = $(this.hash).offset();
+      if (offset) {
+        event.preventDefault();
+        $('html,body').animate({ scrollTop:offset.top }, 500);
+      }
+    });
+  }
+};

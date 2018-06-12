@@ -1,0 +1,64 @@
+.bootcamp #course-info {
+  min-height: 440px; }
+  .bootcamp #course-info .about p {
+    color: #999DA2; }
+    .bootcamp #course-info .about p a, .bootcamp #course-info .about p a:visited {
+      color: #999DA2; }
+  .bootcamp #course-info .about ul {
+    color: #999DA2;
+    margin-top: 0;
+    font-size: 0.9em;
+    line-height: 1.6em; }
+  .bootcamp #course-info .info {
+    margin-top: 124px; }
+    .bootcamp #course-info .info .btn-enroll-platform {
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      background-color: #2dc1d5;
+      text-shadow: 1px 1px 0px #1d8493;
+      -webkit-box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.45), 0px 2px 2px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: inset 0px -3px 1px rgba(0, 0, 0, 0.45), 0px 2px 2px rgba(0, 0, 0, 0.25);
+      box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.45), 0px 2px 2px rgba(0, 0, 0, 0.25);
+      font-size: 1em;
+      font-weight: 500;
+      text-align: center;
+      padding: 0.6em 0.5em;
+      color: #ffffff;
+      display: inline-block; }
+      .bootcamp #course-info .info .btn-enroll-platform > img {
+        vertical-align: middle; }
+      .bootcamp #course-info .info .btn-enroll-platform > span {
+        padding-left: 5px; }
+    .bootcamp #course-info .info .btn-enroll {
+      margin-top: 1.4em; }
+.bootcamp .screens img {
+  padding-right: 1.2em; }
+
+#reserve_seat_page.bootcamp #course-info {
+  min-height: 475px; }
+  #reserve_seat_page.bootcamp #course-info h2.left {
+    padding-top: 1.4em; }
+  #reserve_seat_page.bootcamp #course-info .info {
+    margin-top: 100px; }
+    #reserve_seat_page.bootcamp #course-info .info .title span {
+      color: #8c9299; }
+  #reserve_seat_page.bootcamp #course-info .about a {
+    color: #8c9299; }
+#reserve_seat_page.bootcamp .companies {
+  background: #ffffff;
+  text-align: center;
+  min-height: 150px;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 1.4em; }
+  #reserve_seat_page.bootcamp .companies h3 {
+    margin: 0 auto 0 auto;
+    width: 1100px;
+    font-size: 1.1em;
+    padding-bottom: 0.8em;
+    text-align: left; }
+  #reserve_seat_page.bootcamp .companies img {
+    margin: 1em 1.5em;
+    vertical-align: middle; }

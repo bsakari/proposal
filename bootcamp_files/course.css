@@ -1,0 +1,295 @@
+@font-face {
+  font-family: "GillSans";
+  src: url(/fonts/GillSans.eot);
+  src: url(/fonts/GillSans.ttf) format("truetype");
+  src: url(/fonts/GillSans.ttc);
+  font-weight: "normal";
+  font-style: "normal"; }
+
+@font-face {
+  font-family: "gotham";
+  src: url("/fonts/gothamextralight.eot");
+  src: url("/fonts/gothamextralight.woff") format("woff"), url("/fonts/gothamextralight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'gotham';
+  src: url("/fonts/gotham-light.eot");
+  src: url("/fonts/gotham-light.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham-light.woff") format("woff"), url("/fonts/gotham-light.ttf") format("truetype"), url("/fonts/gotham-light.svg#gothamlight") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'gotham';
+  src: url("/fonts/gotham-regular.eot");
+  src: url("/fonts/gotham-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham-regular.woff") format("woff"), url("/fonts/gotham-regular.ttf") format("truetype"), url("/fonts/gotham-regular.svg#gothamregular") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "gotham";
+  src: url("/fonts/gothammedium.eot");
+  src: url("/fonts/gothammedium.woff") format("woff"), url("/fonts/gothammedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "gotham";
+  src: url("/fonts/gothambold1.eot");
+  src: local("Gotham-Bold"), url("/fonts/gothambold1.woff") format("woff"), url("/fonts/gothambold1.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "myriadpro";
+  src: url("/fonts/myriadpro_bold.eot");
+  src: url("/fonts/myriadpro_bold.woff") format("woff"), url("/fonts/myriadpro_bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "myriadpro";
+  src: url("/fonts/myriadpro_regular.eot");
+  src: url("/fonts/myriadpro_regular.woff") format("woff"), url("/fonts/myriadpro_regular.ttf") format("truetype");
+  font-style: normal; }
+
+@font-face {
+  font-family: "myriadpro";
+  src: url("/fonts/myriadpro_light.eot");
+  src: url("/fonts/myriadpro_light.woff") format("woff"), url("/fonts/myriadpro_light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200; }
+
+@font-face {
+  font-family: "whitney";
+  src: url("/fonts/whitneylightpro.eot");
+  src: url("/fonts/whitneylightpro.woff") format("woff"), url("/fonts/whitneylightpro.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "whitney";
+  src: url("/fonts/whitneymediumpro.eot");
+  src: url("/fonts/whitneymediumpro.woff") format("woff"), url("/fonts/whitneymediumpro.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "whitney";
+  src: url("/fonts/whitneylightitalicpro.eot");
+  src: url("/fonts/whitneylightitalicpro.woff") format("woff"), url("/fonts/whitneylightitalicpro.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: "whitney";
+  src: url("/fonts/whitneybookpro.eot");
+  src: url("/fonts/whitneybookpro.woff") format("woff"), url("/fonts/whitneybookpro.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "whitney";
+  src: url("/fonts/whitneysemiboldpro.eot");
+  src: url("/fonts/whitneysemiboldpro.woff") format("woff"), url("/fonts/whitneysemiboldpro.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: "whitney";
+  src: url("/fonts/whitneybookitalic.eot");
+  src: url("/fonts/whitneybookitalic.woff") format("woff"), url("/fonts/whitneybookitalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: "whitney";
+  src: url("/fonts/whitneysemibolditalic.eot");
+  src: url("/fonts/whitneysemibolditalic.woff") format("woff"), url("/fonts/whitneysemibolditalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic; }
+
+@font-face {
+  font-family: "whitney";
+  src: url("/fonts/whitneymediumitalic.eot");
+  src: url("/fonts/whitneymediumitalic.woff") format("woff"), url("/fonts/whitneymediumitalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: "whitney";
+  src: url("/fonts/whitneybolditalic.eot");
+  src: url("/fonts/whitneybolditalic.woff") format("woff"), url("/fonts/whitneybolditalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic; }
+
+#hero {
+  background: url("/images/bg/course-page-hero.png") transparent no-repeat center;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center; }
+  #hero div.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 215px; }
+    #hero div.heading .image {
+      position: relative;
+      left: 114px;
+      top: 6px; }
+    #hero div.heading .title {
+      color: #ffffff;
+      min-width: 800px;
+      text-align: left;
+      font-size: 40px;
+      margin-top: 20px;
+      -webkit-text-shadow: 0 2px 2px #333333;
+      -moz-text-shadow: 0 2px 2px #333333;
+      -ms-text-shadow: 0 2px 2px #333333;
+      /* IE 10+ */
+      -o-text-shadow: 0 2px 2px #333333;
+      text-shadow: 0 2px 2px #333333;
+      font-family: "gotham", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.course-page.sponsored #course-info {
+  min-height: 540px; }
+.course-page #course-info {
+  background-color: #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 364px; }
+  .course-page #course-info .content {
+    width: 1034px;
+    margin: auto;
+    overflow: hidden; }
+  .course-page #course-info .about {
+    width: 55%;
+    float: left; }
+    .course-page #course-info .about h2 {
+      padding-bottom: 0.8em; }
+    .course-page #course-info .about p {
+      color: #abafb4;
+      line-height: 1.6em;
+      font-size: 0.9em; }
+  .course-page #course-info .info {
+    width: 40%;
+    float: right;
+    margin-top: 70px;
+    margin-left: 1em;
+    padding-bottom: 0.3em; }
+    .course-page #course-info .info .item {
+      max-width: 400px;
+      margin-bottom: 0.2em;
+      overflow: hidden; }
+      .course-page #course-info .info .item img {
+        float: left; }
+      .course-page #course-info .info .item .summary {
+        margin-left: 0.5em;
+        float: left;
+        max-width: 420px; }
+      .course-page #course-info .info .item .title {
+        color: #2bb9d0;
+        font-weight: bold;
+        font-weight: 1.2em;
+        padding-bottom: 0.4em; }
+      .course-page #course-info .info .item .title span {
+        color: #fc6f2d; }
+      .course-page #course-info .info .item p {
+        color: #8c9299;
+        font-size: 0.9em; }
+    .course-page #course-info .info .sponsor {
+      padding: 0.5em 0 1em 0; }
+      .course-page #course-info .info .sponsor h3 {
+        padding-top: 0.6em;
+        padding-bottom: 0.4em;
+        margin: 0;
+        font-size: 0.9em; }
+      .course-page #course-info .info .sponsor .cosponsor {
+        display: inline-block;
+        padding-top: 0.8em; }
+      .course-page #course-info .info .sponsor img.cosponsor {
+        padding: 0.5em; }
+    .course-page #course-info .info .btn-enroll {
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      background-color: #2dc1d5;
+      text-shadow: 1px 1px 0px #1d8493;
+      -webkit-box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.45), 0px 2px 2px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: inset 0px -3px 1px rgba(0, 0, 0, 0.45), 0px 2px 2px rgba(0, 0, 0, 0.25);
+      box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.45), 0px 2px 2px rgba(0, 0, 0, 0.25);
+      font-size: 1em;
+      font-weight: 500;
+      text-align: center;
+      text-transform: uppercase;
+      display: block;
+      width: 125px;
+      padding: 0.6em 0.5em;
+      color: #ffffff; }
+.course-page #cards {
+  background: url("/images/bg/events-bg.png") transparent repeat-x center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 281px;
+  text-align: center;
+  padding-top: 3em; }
+.course-page #curriculum {
+  background-color: #f7f5f2;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 472px;
+  text-align: center; }
+  .course-page #curriculum h2 {
+    padding-bottom: 1.8em; }
+  .course-page #curriculum .content {
+    width: 1034px;
+    margin: auto; }
+  .course-page #curriculum .lessons {
+    padding-bottom: 2em; }
+    .course-page #curriculum .lessons .lesson {
+      display: inline-block;
+      text-align: left;
+      width: 336px;
+      overflow: hidden; }
+      .course-page #curriculum .lessons .lesson img {
+        float: left; }
+      .course-page #curriculum .lessons .lesson .summary {
+        float: left;
+        width: 240px;
+        margin-left: 1em; }
+        .course-page #curriculum .lessons .lesson .summary h3 {
+          font-size: 1.1em;
+          white-space: nowrap; }
+        .course-page #curriculum .lessons .lesson .summary p {
+          font-size: 0.9em;
+          color: #8c9299;
+          line-height: 1.6em; }
+.course-page #project-overview {
+  background: url("/images/bg/projects-bg.png") transparent repeat-x;
+  min-height: 588px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .course-page #project-overview .content {
+    width: 1034px;
+    margin: auto; }
+  .course-page #project-overview h2.left {
+    padding-bottom: 0.5em; }
+  .course-page #project-overview .content > p {
+    line-height: 1.6em;
+    font-size: 0.9em; }
+  .course-page #project-overview .screens {
+    text-align: center;
+    margin-top: 1em; }
+  .course-page #project-overview p.outro {
+    margin-top: 1.6em; }
+  .course-page #project-overview .content a {
+    color: #ddf3f7; }
